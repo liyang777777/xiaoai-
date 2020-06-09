@@ -20,7 +20,7 @@ Vue.use(VueRouter)
     path: '/login',
     name: 'Login',
     
-    component: () => import('../views/login/Login')
+    component: () => import('../views/detail/Detail')
   },
   {
     path: '/register',
