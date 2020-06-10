@@ -47,10 +47,10 @@ Vue.use(VueRouter)
     component: () => import('../views/detail/Detail')
   },
   {
-    path: '/detail',
+    path: '/layout',
     name: 'Etxy',
     
-    component: () => import('../components/detail/Etxy')
+    component: () => import('../components/layout/Etxy')
   }
 ]
 
