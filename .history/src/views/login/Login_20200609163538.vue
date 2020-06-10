@@ -2,7 +2,7 @@
 <!-- 登录界面 -->
   <div class="All el-cardAll">
     <div>
-      <img src='../../assets/afc80a0e2c0a4b19b290f01162add18b.gif' alt class="img" />
+      <img src="../assets/afc80a0e2c0a4b19b290f01162add18b.gif" alt class="img" />
     </div>
     <el-card class="box-card">
       <div slot="header" class="clearfix">
@@ -91,7 +91,7 @@ export default {
   methods: {
     // 去注册页面
     goToUp() {
-      this.$router.push("/register");
+      this.$router.push("/sign-up");
     },
 
     // 获取验证码的请求

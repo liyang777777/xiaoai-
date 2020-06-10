@@ -39,12 +39,6 @@ Vue.use(VueRouter)
     name: 'Layout',
     
     component: () => import('../views/layout/Layout')
-  },
-  {
-    path: '/detail',
-    name: 'Detail',
-    
-    component: () => import('../views/detail/Detail')
   }
 ]
 

@@ -32,19 +32,13 @@ Vue.use(VueRouter)
     path: '/err',
     name: 'Err',
     
-    component: () => import('../views/err/Err')
+    component: () => import('../views/register/Register')
   },
   {
     path: '/layout',
     name: 'Layout',
     
-    component: () => import('../views/layout/Layout')
-  },
-  {
-    path: '/detail',
-    name: 'Detail',
-    
-    component: () => import('../views/detail/Detail')
+    component: () => import('../views/register/Register')
   }
 ]
 

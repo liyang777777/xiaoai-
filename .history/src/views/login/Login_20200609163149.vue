@@ -1,12 +1,12 @@
 <template>
-<!-- 登录界面 -->
+  <!-- 登录界面 -->
   <div class="All el-cardAll">
     <div>
-      <img src='../../assets/afc80a0e2c0a4b19b290f01162add18b.gif' alt class="img" />
+      <img src="../../assets/afc80a0e2c0a4b19b290f01162add18b.gif" alt class="img" />
     </div>
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-        <span class="title">欢迎来到军师后台管理系统</span>
+        <span class="title">欢迎来到小爱后台管理系统</span>
       </div>
       <div>
         <el-form
@@ -33,13 +33,11 @@
               <el-input type="password" v-model="ruleForm.pass" autocomplete="off" show-password></el-input>
             </el-form-item>
           </el-form>
-
           <el-form-item label="验证码" prop="code">
             <i class="el-icon-document"></i>
             <el-input v-model="ruleForm.code" :maxlength="4" style="width: 40%"></el-input>
             <div v-html="code" class="code" @click="getCode"></div>
           </el-form-item>
-
           <el-form-item>
             <el-button type="primary" @click="goToHome">立即登录</el-button>
             <el-button @click="goToUp">注册</el-button>
@@ -71,27 +69,25 @@ export default {
     return {
       ruleForm: {
         name: "",
-        pass: "",
-        code: ""
+        pass: ""
       },
-      code: "",
       rules: {
         name: [
           { required: true, message: "请输入用户名", trigger: "blur" },
           { min: 2, max: 10, message: "长度在 2 到 10 个字符", trigger: "blur" }
         ],
         pass: [
-          { required: true, validator: validatePass, trigger: "blur" },
+          { required: true, message: "请输入密码", trigger: "blur" },
           { min: 6, max: 15, message: "长度在 6 到 15 个字符", trigger: "blur" }
         ],
         code: [{ required: true, message: "验证码不能为空", trigger: "blur" }]
       }
     };
   },
-  methods: {
+ methods: {
     // 去注册页面
     goToUp() {
-      this.$router.push("/register");
+      this.$router.push("/sign-up");
     },
 
     // 获取验证码的请求
@@ -196,17 +192,5 @@ export default {
   left: 10px;
   top: 14px;
   color: #fff;
-}
-.el-icon-document {
-  position: absolute;
-  left: 10px;
-  top: 14px;
-  color: #fff;
-}
-.code {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  height: 40px;
 }
 </style>

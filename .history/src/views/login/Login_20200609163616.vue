@@ -91,7 +91,7 @@ export default {
   methods: {
     // 去注册页面
     goToUp() {
-      this.$router.push("/register");
+      this.$router.push("/sign-up");
     },
 
     // 获取验证码的请求
