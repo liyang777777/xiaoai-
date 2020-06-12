@@ -83,25 +83,25 @@ export default {
       this.$router.push("/Home");
     },
     Detail1() {
-      this.$router.push("/Published");
+      this.$router.push("/detail1");
     },
     Detail2() {
-      this.$router.push("/Statistics");
+      this.$router.push("/detail2");
     },
     Detail3() {
-      this.$router.push("/Paar");
+      this.$router.push("/detail3");
     },
     Detail4() {
-      this.$router.push("/Tab");
+      this.$router.push("/detail4");
     },
     Detail5() {
-      this.$router.push("/Exe");
+      this.$router.push("/detail5");
     },
     Detail6() {
       this.$router.push("/Pup");
     },
     Detail7() {
-      this.$router.push("/Etxy");
+      this.$router.push("/detail7");
     }
   },
   mounted() {

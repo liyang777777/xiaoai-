@@ -1,7 +1,7 @@
 <template>
   <div class="conter">
     <div class="box">期待您的下次光临</div>
-    <el-button type="text" class="btn" @click="code">确定退出</el-button>
+    <el-button type="text" class="btn">确定退出</el-button>
   </div>
 </template>
 
@@ -13,21 +13,16 @@ export default {
   components: {},
   data() {
     return {
-     
+      
     };
   },
   methods: {
-    code() {
+    getData() {
       axios
         .get("/api/user/logout")
         .then(res => {
-          // console.log(res.data);
-          this.$message({
-            message: res.data.message,
-            type: 'success'
-          })
-          localStorage.removeItem('user')
-          this.$router.push('/Login')
+          // console.log(res);
+          this.getData = res.data.data;
         })
         .catch(err => {
           console.log(err);
@@ -35,7 +30,7 @@ export default {
     }
   },
   mounted() {
-    
+    this.getData();
   },
   watch: {},
   computed: {}

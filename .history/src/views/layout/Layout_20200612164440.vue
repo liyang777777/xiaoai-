@@ -89,19 +89,19 @@ export default {
       this.$router.push("/Statistics");
     },
     Detail3() {
-      this.$router.push("/Paar");
+      this.$router.push("/detail3");
     },
     Detail4() {
-      this.$router.push("/Tab");
+      this.$router.push("/detail4");
     },
     Detail5() {
-      this.$router.push("/Exe");
+      this.$router.push("/detail5");
     },
     Detail6() {
       this.$router.push("/Pup");
     },
     Detail7() {
-      this.$router.push("/Etxy");
+      this.$router.push("/detail7");
     }
   },
   mounted() {

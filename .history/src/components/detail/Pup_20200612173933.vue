@@ -3,7 +3,7 @@
     <el-upload
       class="upload-demo"
       drag
-      action="http://t7.baidu.com/it/u=378254553,3884800361&fm=79&app=86&f=JPEG?w=1280&h=2030"
+      action="https://jsonplaceholder.typicode.com/posts/"
       multiple
     >
       <i class="el-icon-upload"></i>

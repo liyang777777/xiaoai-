@@ -83,12 +83,12 @@ export default {
   },
   data() {
     return {
-      visits: 0,
-      messages: 0,
-      purchases: 0,
-      shopping: 0,
-      startVal: 0,
-      endVal: ""
+      visits: '',
+      messages: '',
+      purchases: '',
+      shopping: '',
+      startVal: '',
+      endVal: 0
     };
   },
   methods: {

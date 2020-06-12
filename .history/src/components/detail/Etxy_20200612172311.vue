@@ -21,13 +21,8 @@ export default {
       axios
         .get("/api/user/logout")
         .then(res => {
-          // console.log(res.data);
-          this.$message({
-            message: res.data.message,
-            type: 'success'
-          })
-          localStorage.removeItem('user')
-          this.$router.push('/Login')
+          // console.log(res);
+          this.getData = res.data.data;
         })
         .catch(err => {
           console.log(err);

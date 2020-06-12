@@ -88,7 +88,7 @@ export default {
       purchases: 0,
       shopping: 0,
       startVal: 0,
-      endVal: ""
+      endVal: 0
     };
   },
   methods: {

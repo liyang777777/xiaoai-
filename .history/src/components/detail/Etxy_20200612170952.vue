@@ -1,48 +1,34 @@
 <template>
   <div class="conter">
     <div class="box">期待您的下次光临</div>
-    <el-button type="text" class="btn" @click="code">确定退出</el-button>
+    <el-button type="text" class="btn">确定退出</el-button>
   </div>
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
 export default {
   name: "Etxy",
   props: {},
   components: {},
   data() {
-    return {
-     
-    };
+    return {};
   },
   methods: {
-    code() {
-      axios
-        .get("/api/user/logout")
-        .then(res => {
-          // console.log(res.data);
-          this.$message({
-            message: res.data.message,
-            type: 'success'
-          })
-          localStorage.removeItem('user')
-          this.$router.push('/Login')
-        })
-        .catch(err => {
-          console.log(err);
-        });
+    getData() {
+      axios.get('/api/user/logout').then(res => {
+        console.log(res);
+      })
     }
   },
-  mounted() {
-    
-  },
+  mounted() {},
   watch: {},
   computed: {}
 };
 </script>
  
 <style scoped lang='scss'>
+
 .box {
   width: 100%;
   height: 200px;
