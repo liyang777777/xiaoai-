@@ -103,7 +103,7 @@ export default {
         .get("/api/tableData")
         .then(res => {
           this.tableData = res.data.data;
-          // console.log(res.data.data);
+          console.log(res.data.data);
         })
         .catch(err => {
           console.log(err);
@@ -157,7 +157,7 @@ export default {
 .el-input {
   width: 300px;
   position: relative;
-  left: -420px;
+  bottom: 10px;
 }
 
 .el-pagination {

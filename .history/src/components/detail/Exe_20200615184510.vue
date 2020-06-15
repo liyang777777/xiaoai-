@@ -157,7 +157,7 @@ export default {
 .el-input {
   width: 300px;
   position: relative;
-  left: -420px;
+  bottom: 40px;
 }
 
 .el-pagination {
