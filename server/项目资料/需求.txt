@@ -120,7 +120,7 @@
           star: 重要性
           text: 文章内容
           date: 发布时间
-    - 获取所有文章: /article/allArticle (get请求)
+    - 获取所有文章: /api/article/allArticle (get请求)
 
     - 查看单个文章: /article/article
       - post请求
