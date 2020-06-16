@@ -51,10 +51,11 @@
   </div>
 </template>
 
+
 <script>
 import axios from "axios";
 import groupBy from "lodash/groupBy";
-import dayjs from "dayjs";
+import dayjs from "dayjs"
 export default {
   name: "",
   props: {},
@@ -64,12 +65,12 @@ export default {
       roseType: "radius"
     };
     this.chartSettingt = {
-      dimension: "时间",
-      metrics: "数量"
-    };
+        dimension: '时间',
+        metrics: '数量'
+      }
     return {
-      time: [],
-      self: [],
+      time:[],
+      self:[],
       chartData: {
         columns: ["分类", "数量"],
         rows: []
@@ -79,9 +80,9 @@ export default {
         rows: []
       },
       chartData3: {
-        columns: ["数量", "时间"],
-        rows: []
-      }
+          columns: ['数量', '时间'],
+          rows: []
+        }
     };
   },
   methods: {},
@@ -108,21 +109,21 @@ export default {
         for (let i in obj2) {
           this.chartData3.rows.push({
             数量: obj2[i].length,
-            时间: dayjs(i).format("YYYY年MM月DD日")
+            时间: dayjs(i).format('YYYY年MM月DD日')
           });
         }
         // 获取今日发布和原创文章的数量
         // 先把已发表文章的时间转换成年月日的格式
-        res.data.data.map(item => {
-          item.date = dayjs(item.date).format("YYYY年MM月DD日");
-        });
+       res.data.data.map(item => {
+          item.date = dayjs(item.date).format('YYYY年MM月DD日')
+        })
         // 然后定义一个数组来组成已发表文章里和当前年月日相等的数据
         this.time = res.data.data.filter(item => {
-          return item.date === dayjs().format("YYYY年MM月DD日");
-        });
+        return item.date === dayjs().format('YYYY年MM月DD日')
+        }) 
         this.self = res.data.data.filter(item => {
-          return item.source === "原创";
-        });
+          return item.source === '原创'
+        })
         // console.log(this.self);
       })
       .catch(err => {
